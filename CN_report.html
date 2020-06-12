@@ -8,11 +8,11 @@ style="background-repeat:repeat">
 
 <p style="text-align:center; font-family:arial; font-size:20px"> 
 学号：
-<u>2018300003058_</u>
+<u>2018300003058</u>
 姓名：
-<u>辛嘉宇_</u>
+<u>辛嘉宇</u>
 班级：
-<u>工科3班_</u>
+<u>工科3班</u>
 分数：______ 
 </p>
 
@@ -87,8 +87,9 @@ waiting for me to finish..
 <h2>问题3:</h2>
 &nbsp;&nbsp;TSN的主要工作原理是优先适用（IEEE P802.1br）机制，在传输中让关键数据包优先处理，
 关键数据无需等待所有的非关键数据完成传输后才开始，从而确保更快速的传输路径。<br/>
-IEEE&nbsp;802.1标准如下：<br/>
+
 <table border="1">
+<caption>IEEE&nbsp;802.1标准如下</caption>
 <tr><!--第一行-->
   <td>IEEE&nbsp;802.1标准</td>
   <td>特性</td>
@@ -148,8 +149,17 @@ IEEE&nbsp;802.1标准如下：<br/>
 在交换机的出口为每个端口使用多个队列，出口处的排队消息将在闸门打开时发出，消息发送的时间间隔则取决于调度安排。
 为了对网络延迟的进行确定性的预测以及管理，我们选择将消息进行定时释放，
 可以起到帮助在同一网络上融合关键流量和非关键流量的作用。<br/>
-<img src="picture/TSN.jpg">
+<img src="picture/TSN.jpg" alt="TSN">
 <br/>
+
+<b>一、交换机配置</b><br/>
+不同路径同时传输：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过802.1CB标准，我们可以使用其特性作为一种实现方法--在网络的不同路径上
+同时传输相同的消息副本。及时接收的第一个消息副本将被处理，而其他副本将被丢弃。<br/>
+提高非关键消息的带宽使用效率：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过802.1Qbu标准，其抢占特性中断大型帧的传输，
+以较小的片段发送大型帧并在下一个链路对其重组。<br/>
+
 
 
 
